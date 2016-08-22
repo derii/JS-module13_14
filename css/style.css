@@ -1,0 +1,137 @@
+body {
+	background: #c8c6c6;
+}
+h1, h2, h3, h4, h5, h6, p {
+	color: #232323;
+}
+.wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 2px solid #232323;
+	background: #fff;
+}
+form {
+	padding: 25px 0 60px 100px;
+}
+.test-title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+.answer-label {
+	display: block;
+	margin-left: 20px;
+}
+
+input.answer-checkbox {
+	-webkit-appearance:none;
+	width:14px;
+	height:14px;
+	border:2px solid #000;
+	outline:none;
+	margin-right:10px;
+	box-sizing:border-box;
+	display:inline-block;
+	background-color: #cfe2f3;
+}
+input.answer-checkbox:checked:before {
+	content:"";
+	display:block;
+	width:7px;
+	height:10px;
+	border:0 solid rgb(58, 153, 45);
+	border-width:0 4px 2px 0;
+	-webkit-transform:rotateZ(45deg);
+	margin:0 3px;
+	pointer-events:none;
+}
+.test-result-btn {
+	font-weight: bold;
+	margin-top: 50px;
+	background-color: #cfe1f5;
+	color: #000;
+	border-radius: 2px;
+	border: 3px solid #000;
+}
+.test-result-btn:hover,
+.test-result-btn:active,
+.test-result-btn:visited,
+.test-result-btn:link,
+.test-result-btn:focus {
+	background-color: #a7c5df !important;
+	border: 3px solid #000 !important;
+	color: #232323;
+}
+@media screen and (max-width: 479px) {
+	form {
+		padding: 15px 0 60px;
+	}
+}
+
+/* =========================================== Modal window ======================================*/
+.modal-test {
+  position: absolute;
+  width: 400px;
+  min-height: 300px;
+  top: -50%;
+  left: 50%;
+  margin: -150px 0 0 -200px;
+  border: 2px solid #232323;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+}
+.modal-test h1{
+  margin-top: 0;
+  background-color: #F57C00;
+  color: #fff;
+  border-bottom: 2px solid #232323;
+}
+.modal-test h1{
+  padding: 10px;
+  margin-bottom: 0 !important;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-overlay:hover {
+  cursor: pointer;
+}
+.answer-right {
+  background-color: #71CE71;
+  padding: 10px;
+  border-bottom: 2px solid #232323;
+}
+.answer-error {
+  padding: 10px;
+  background-color: #F58E8E;
+    border-bottom: 2px solid #232323;
+}
+.answer-error h2,
+.answer-right h2 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.congratulations {
+	background-color: #71CE71;
+	padding: 2px;
+}
+.congratulations h2,
+.bad h2,
+.not-bad h2 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+    color: #fff;
+}
+.bad {
+	background-color: red;
+	padding: 20px;
+}
+.not-bad {
+	background-color: #64DD17;
+	padding: 20px;
+}

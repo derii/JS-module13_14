@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>JavaScript. Module 13-14. Bogdan Derii</title>
+	
+	<link rel="stylesheet" href="css/reset.css">	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="js/tmpl.js"></script>
+	<script src="js/script.js"></script>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body>
+
+	<script type="text/html" class="form-test">
+		<div class="wrapper container">
+			<form class="row" action="#">
+				<h2 class="test-title col-md-12"><%=testTitle %></h2>
+				<% for (var i = 0; i < testQuestions.length; i++) { %>
+					<div class="col-md-12">
+						<h3><%= i + 1 + ". " + testQuestions[i].title %></h3>
+						<% for (var j = 0; j < testQuestions[i].answer.length; j++) { %>
+						<label class="answer-label"><input class="answer-checkbox" type="checkbox" data-index="<%= i %>"><%= " " + testQuestions[i].answer[j].text %></label>
+						<% } %>
+					</div>
+				<% } %>
+				<input class="test-result-btn btn btn-primary btn-lg col-md-offset-3 col-md-6" type="submit" value="<%= btnTestResult %>">
+			</form>
+		</div>
+	</script>
+	
+</body>
+</html>
